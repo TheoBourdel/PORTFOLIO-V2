@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--chakra-colors-gray-900);
+}
+
+.main {
+    width: 100%;
+    margin-top: 40px;
+    font-family: 'Georama', sans-serif;
+    padding-top: 50px;
+    max-width: var(--chakra-sizes-container-md);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    width: 100%;
+    max-width: var(--chakra-sizes-container-md);
+    color: var(--chakra-colors-white);
+    position: fixed;
+    top: 0;
+    background: rgba(23, 25, 35, .5);
+    backdrop-filter: blur(2px);
+    z-index: 100;
+}
+.header > h1 {
+    font-weight: bold;
+    font-size: var(--chakra-fontSizes-xl);
+}
+.header-nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 40px;
+}
+.header-nav-list-item {
+    cursor: pointer;
+}
+.career-logo {
+    width: 50px;
+    height: 50px;
+    fill: #48BB78;
+}
+.burger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 840px) {
+    body {
+        margin: 0 30px;
+    }
+    .header {
+        padding: 10px 30px 0 30px !important;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .header > nav
+     {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
